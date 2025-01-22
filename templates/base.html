@@ -1,16 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>PyInventoryManager</title>
+    <link href="{% static 'dist/output.css' %}" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/categories/">Categories</a>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-gray-800">PyInventoryManager</a>
+            <div class="space-x-4">
+                <a href="/" class="text-gray-600 hover:text-gray-800">Home</a>
+                <a href="/categories/" class="text-gray-600 hover:text-gray-800">Categories</a>
+            </div>
         </nav>
     </header>
-    <main>
+    <main class="container mx-auto px-4 py-8">
         {% block content %}
         {% endblock %}
     </main>

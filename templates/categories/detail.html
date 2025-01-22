@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ category.name }}</h1>
-<a href="{% url 'categories:index' %}">Back to list</a>
+<div class="bg-white shadow rounded-lg p-6">
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold text-gray-800">{{ category.name }}</h1>
+        <a href="{% url 'categories:index' %}" class="text-gray-600 hover:text-gray-800">
+            ← Back to list
+        </a>
+    </div>
+</div>
 {% endblock %}

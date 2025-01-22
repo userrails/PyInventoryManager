@@ -1,11 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% if form.instance.id %}Edit{% else %}Create{% endif %} Category</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save</button>
-    <a href="{% url 'categories:index' %}">Cancel</a>
-</form>
+<div class="max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold mb-8">
+        {% if form.instance.id %}Edit{% else %}Create{% endif %} Category
+    </h1>
+    
+    <form method="post" class="bg-white shadow rounded-lg p-6">
+        {% csrf_token %}
+        
+        <div class="space-y-6">
+            {{ form.as_p }}
+        </div>
+
+        <div class="mt-8 flex justify-end space-x-4">
+            <a href="{% url 'categories:index' %}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                Cancel
+            </a>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Save
+            </button>
+        </div>
+    </form>
+</div>
 {% endblock %}
