@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from django.core.management.base import BaseCommand
-from categories.models import Category, Product
+from stocks.models import Category, Product
 
 class Command(BaseCommand):
     help = 'Scrape categories and products from website'

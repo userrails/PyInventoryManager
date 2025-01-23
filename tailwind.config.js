@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     './templates/**/*.html',
-    './categories/templates/**/*.html',
+    './stocks/templates/**/*.html',
   ],
   theme: {
     extend: {},
