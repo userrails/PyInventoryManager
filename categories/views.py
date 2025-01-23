@@ -37,3 +37,9 @@ def delete(request, pk):
     if request.method == 'POST':
         category.delete()
     return redirect('categories:index')
+
+def products(request):
+    products = Product.objects.select_related('category').all()
+    return render(request, 'categories/products.html', {
+        'products': products
+    })
