@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
-from .models import Category
+from .models import Category, Product
 from .forms import CategoryForm
 
 def index(request):
